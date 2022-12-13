@@ -16,3 +16,4 @@ func _unhandled_input(_event):
 			else:
 				get_tree().paused = false
 				menu.hide()
+

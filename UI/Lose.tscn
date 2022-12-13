@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/10821163.jpg" type="Texture" id=1]
+[ext_resource path="res://Assets/mixkit-horror-lose-2028.wav" type="AudioStream" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.266667, 0.266667, 0.266667, 1 )
+
+[node name="10821163" type="Sprite" parent="."]
+position = Vector2( 513, 299.5 )
+scale = Vector2( 0.531482, 0.558333 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 1024.0
+margin_bottom = 300.0
+text = "Oh no the zombie got you!
+You Lose"
+align = 1
+valign = 1
+
+[node name="Play" type="Button" parent="."]
+margin_left = 462.0
+margin_top = 250.0
+margin_right = 562.0
+margin_bottom = 290.0
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 462.0
+margin_top = 300.0
+margin_right = 562.0
+margin_bottom = 340.0
+text = "Quit"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

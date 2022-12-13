@@ -3,11 +3,12 @@ extends KinematicBody
 onready var Camera = $Pivot/Camera
 
 var gravity = -30
-var max_speed = 8
+var max_speed = 10
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 
 var velocity = Vector3()
+
 
 func get_input():
 	var input_dir = Vector3()
